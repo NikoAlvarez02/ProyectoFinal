@@ -49,9 +49,9 @@
 
 ## 🛠️ Herramientas
 
-- **Backend:** Django o ASP.NET Core MVC (según lo que estemos usando finalmente)
-- **Frontend:** HTML, CSS, JS, Bootstrap o el framework que decida el team
-- **DB:** SQL Server / PostgreSQL / MySQL (dependiendo de la stack final)
+- **Backend:** Python + Django REST framework
+- **Frontend:** React.JS
+- **DB:** PostgreSQL
 - **Control de versiones:** Git + GitHub
 
 ---
