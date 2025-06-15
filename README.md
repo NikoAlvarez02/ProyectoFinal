@@ -23,20 +23,6 @@
 
 ---
 
-## 🚀 Responsables y tareas
-
-| Parte | Responsable | Rama |
-|-------|-------------|------|
-| Usuarios y login | Karina y c&o | `feature/usuarios` |
-| Pacientes | Brian Romero | `feature/pacientes` |
-| Profesionales | Fernando Santos | `feature/profesionales` |
-| Turnos | Diego Díaz | `feature/turnos` |
-| Frontend (UI/UX) | Martin chazarreta  | `feature/frontend` |
-| Base de datos y modelos | Nicolás Álvarez| `feature/database` |
-| Integración y testing | Martín Fernández | `feature/testing` |
-
----a futuro agregar historia clínica del paciente y registro de uso del sistema y accesos.
-
 ## 🚦 Reglas básicas (para no romper nada):
 
 ✅ Siempre trabajar en la rama `feature/...` correspondiente  
@@ -44,15 +30,6 @@
 ✅ Los QA prueban todo antes de mergear  
 ✅ Si tenés dudas, preguntá en el grupo antes de meter cambios grandes  
 ✅ Los commits deben ser claros (no vale "cositas" 😜)
-
----
-
-## 🛠️ Herramientas
-
-- **Backend:** Python + Django REST framework
-- **Frontend:** React.JS
-- **DB:** PostgreSQL
-- **Control de versiones:** Git + GitHub
 
 ---
 
