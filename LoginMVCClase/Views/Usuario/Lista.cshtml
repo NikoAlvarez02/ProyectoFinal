@@ -1,0 +1,32 @@
+﻿@model List<LoginMVCClase.Models.UsuarioModel>
+
+<h2>Listado de Usuarios</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Nombre</th>
+        <th>Fecha Nac.</th>
+        <th>Email</th>
+        <th>Acciones</th>
+    </tr>
+    @foreach (var usuario in Model)
+    {
+        <tr>
+            <td>@usuario.id</td>
+            <td>@usuario.username</td>
+            <td>@usuario.name</td>
+            <td>@usuario.fechanacimiento</td>
+            <td>@usuario.email</td>
+            <td>
+                <a asp-action="Editar" asp-route-id="@usuario.id" class="btn btn-sm btn-primary">Editar</a>
+
+                <form asp-action="Eliminar" method="post" asp-route-id="@usuario.id" style="display:inline;"
+                      onsubmit="return confirm('¿Estás seguro que querés eliminar este usuario?');">
+                    <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>

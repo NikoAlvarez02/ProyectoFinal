@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Personas</h2>
+
+<form asp-controller="Persona" asp-action="ForExecution" method="get">
+    <label>Nombre:</label>
+    <input type="text" name="nombre" />
+
+    <label>Apellido:</label>
+    <input type="text" name="apellido" />
+
+    <label>Profesión:</label>
+    <input type="text" name="profesion" />
+
+    <button type="submit">Cargar Personas</button>
+</form>
+
+@if (ViewBag.Persona != null)
+{
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Profesión</th>
+        </tr>
+        @foreach (var persona in ViewBag.Persona)
+        {
+            <tr>
+                <td>@persona.nombre</td>
+                <td>@persona.apellido</td>
+                <td>@persona.profesion</td>
+            </tr>
+        }
+    </table>
+}
+
+
+@if (ViewBag.Error != null)
+{
+    <h1>
+       Error el usuario no cumple los requisitos minimos de seguridad
+    </h1>
+}
