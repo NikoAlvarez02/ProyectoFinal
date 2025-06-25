@@ -1,0 +1,69 @@
+﻿@model MvcCentroPsicopedagogico.Models.Paciente
+
+<h2>Editar Pacientes</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Apellido"></label>
+        <input asp-for="Apellido" class="form-control" />
+        <span asp-validation-for="Apellido" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DNI"></label>
+        <input asp-for="DNI" class="form-control" />
+        <span asp-validation-for="DNI" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FechaNacimiento"></label>
+        <input asp-for="FechaNacimiento" class="form-control" />
+        <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Telefono"></label>
+        <input asp-for="Telefono" class="form-control" />
+        <span asp-validation-for="Telefono" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Direccion"></label>
+        <input asp-for="Direccion" class="form-control" />
+        <span asp-validation-for="Direccion" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for=" ObraSocial"></label>
+        <input asp-for=" ObraSocial" class="form-control" />
+        <span asp-validation-for="ObraSocial" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NumeroAfiliado"></label>
+        <input asp-for="NumeroAfiliado" class="form-control" />
+        <span asp-validation-for="NumeroAfiliado" class="text-danger"></span>
+    </div>
+
+    <div class="form-group form-check">
+        <input asp-for="Activo" class="form-check-input" />
+        <label asp-for="Activo" class="form-check-label"></label>
+    </div>
+   
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a asp-action="Pacientes" asp-controller="Home" class="btn btn-secondary">Cancelar</a>
+</form>

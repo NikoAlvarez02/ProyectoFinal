@@ -1,0 +1,54 @@
+﻿@model IEnumerable<MvcCentroPsicopedagogico.Models.Profesional>
+
+@{
+    ViewData["Title"] = "Administrador";
+}
+
+<h1>Gestion de Profesionales</h1>
+
+<p>
+    <a asp-controller="Profesionales" asp-action="Crear" class="btn btn-success">
+        <i class="fas fa-plus"></i> Agregar Profesional
+    </a>
+</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Especialidad</th>
+            <th>Email</th>
+            <th>Telefono</th>
+            <th>Activo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nombre</td>
+                <td>@item.Apellido</td>
+                <td>@item.Especialidad</td>
+                <td>@item.Email</td>
+                <td>@item.Telefono</td>
+                <td>@item.Activo</td>
+                <td>
+                    <a asp-action="Edit" asp-controller="Profesionales" asp-route-id="@item.Id" class="btn btn-primary">Modificar</a>
+                   
+                </td>
+                <td>
+                    <form asp-action="Delete" asp-controller="Profesionales" method="post" onsubmit="return confirm('¿Estás seguro de que querés eliminar este profesional?');">
+                        <input type="hidden" name="id" value="@item.Id" />
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </form>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
